@@ -1,0 +1,49 @@
+# macOS
+.DS_Store
+
+# Editor
+*.swp
+
+# Xcode user data
+*.xcuserstate
+*.xccheckout
+*.moved-aside
+*.xcscmblueprint
+*.xcuserdatad/
+xcuserdata/
+*.xcworkspace/xcuserdata/
+
+# Build Products
+build/
+DerivedData/
+*.ipa
+*.app
+*.xcarchive
+
+# Swift Package Manager
+Packages/
+Package.pins
+Package.resolved
+.swiftpm/
+.build/
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+
+# Crashlytics / Firebase
+.crashlytics/
+fabric/
+
+# Certificates and Profiles
+*.key
+*.cer
+*.mobileprovision
