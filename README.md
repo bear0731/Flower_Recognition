@@ -32,7 +32,7 @@ Whatflower：iOS 主程式
 4. 模型將花貼標時，使用的是通俗名稱，會導致少部分 wiki 抓不到資料，因此在模型輸出後使用 switch 將名稱轉換。
 
 ## demo
-![demo1](Demo/Demo.gif)
+<img src="Demo/demo.gif" width="150"/>
 ![demo2](Demo/tiger_lily.jpg)
 ![demo3](Demo/Rose.jpg)
 
