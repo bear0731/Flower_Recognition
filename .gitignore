@@ -1,6 +1,7 @@
 # macOS
 .DS_Store
-
+/WhatFlower/FlowerClassifier_convert_Colore.mlmodel
+/WhatFlower/FlowerClassifier.mlmodel
 # Editor
 *.swp
 
