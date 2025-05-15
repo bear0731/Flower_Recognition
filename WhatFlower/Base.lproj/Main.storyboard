@@ -11,7 +11,6 @@
         <!--What Flower?-->
         <scene sceneID="ag4-cm-xpM">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EuO-jt-iMw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="tS0-Nz-AqO" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gIP-RP-nTi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -43,13 +42,13 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="77z-1E-1th"/>
                     </navigationItem>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EuO-jt-iMw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="682" y="135"/>
         </scene>
         <!--What Flower?-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WhatFlower" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -72,18 +71,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZh-qr-J12">
-                                <rect key="frame" x="71" y="729" width="232" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.81769222019999999" green="0.27253204580000001" blue="0.3960784376" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <state key="normal" title="Add to Timeline">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="addToTimelineButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qnx-Y6-lr9"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lV1-VM-b2D"/>
                         <color key="backgroundColor" red="0.10196078431372549" green="0.73725490196078436" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -98,11 +85,11 @@
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="butt" destination="VZh-qr-J12" id="n4O-FB-jsd"/>
                         <outlet property="imageView" destination="B8u-mm-ZIx" id="QVn-Xh-TXC"/>
                         <outlet property="infoLabel" destination="Vlg-Vn-EDK" id="oBy-m0-doi"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1649" y="134"/>
         </scene>

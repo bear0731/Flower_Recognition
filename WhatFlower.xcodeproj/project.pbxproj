@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A1D8665A2DD35EF4008438D6 /* FlowerClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A1D866592DD35EF4008438D6 /* FlowerClassifier.mlmodel */; };
+		A17C73852DD5795D00625453 /* FlowerClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A17C73842DD5795D00625453 /* FlowerClassifier.mlmodel */; };
+		A17C73872DD579F500625453 /* tiger_lily.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A17C73862DD579F500625453 /* tiger_lily.jpg */; };
+		A17C73892DD5868B00625453 /* FlowerClassifier_convert_Colore.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A17C73882DD5868B00625453 /* FlowerClassifier_convert_Colore.mlmodel */; };
 		ADDF4EBC1F07C2D10073FCE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDF4EBB1F07C2D10073FCE7 /* AppDelegate.swift */; };
 		ADDF4EBE1F07C2D10073FCE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDF4EBD1F07C2D10073FCE7 /* ViewController.swift */; };
 		ADDF4EC11F07C2D10073FCE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADDF4EBF1F07C2D10073FCE7 /* Main.storyboard */; };
@@ -18,7 +20,9 @@
 
 /* Begin PBXFileReference section */
 		32E3D26DC8E861DEEADE8895 /* Pods-WhatFlower.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatFlower.release.xcconfig"; path = "Target Support Files/Pods-WhatFlower/Pods-WhatFlower.release.xcconfig"; sourceTree = "<group>"; };
-		A1D866592DD35EF4008438D6 /* FlowerClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = FlowerClassifier.mlmodel; path = "/Users/BF/Development/Flower Classifier/FlowerClassifier.mlmodel"; sourceTree = "<absolute>"; };
+		A17C73842DD5795D00625453 /* FlowerClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FlowerClassifier.mlmodel; sourceTree = "<group>"; };
+		A17C73862DD579F500625453 /* tiger_lily.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tiger_lily.jpg; sourceTree = "<group>"; };
+		A17C73882DD5868B00625453 /* FlowerClassifier_convert_Colore.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FlowerClassifier_convert_Colore.mlmodel; sourceTree = "<group>"; };
 		A1D866602DD362FC008438D6 /* WhatFlower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatFlower.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADDF4EBB1F07C2D10073FCE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADDF4EBD1F07C2D10073FCE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,11 +76,13 @@
 		ADDF4EBA1F07C2D10073FCE7 /* WhatFlower */ = {
 			isa = PBXGroup;
 			children = (
-				A1D866592DD35EF4008438D6 /* FlowerClassifier.mlmodel */,
 				ADDF4EBB1F07C2D10073FCE7 /* AppDelegate.swift */,
 				ADDF4EBD1F07C2D10073FCE7 /* ViewController.swift */,
 				ADDF4EBF1F07C2D10073FCE7 /* Main.storyboard */,
+				A17C73842DD5795D00625453 /* FlowerClassifier.mlmodel */,
 				ADDF4EC21F07C2D10073FCE7 /* Assets.xcassets */,
+				A17C73862DD579F500625453 /* tiger_lily.jpg */,
+				A17C73882DD5868B00625453 /* FlowerClassifier_convert_Colore.mlmodel */,
 				ADDF4EC41F07C2D10073FCE7 /* LaunchScreen.storyboard */,
 				ADDF4EC71F07C2D10073FCE7 /* Info.plist */,
 			);
@@ -145,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADDF4EC61F07C2D10073FCE7 /* LaunchScreen.storyboard in Resources */,
+				A17C73872DD579F500625453 /* tiger_lily.jpg in Resources */,
 				ADDF4EC31F07C2D10073FCE7 /* Assets.xcassets in Resources */,
 				ADDF4EC11F07C2D10073FCE7 /* Main.storyboard in Resources */,
 			);
@@ -202,8 +209,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1D8665A2DD35EF4008438D6 /* FlowerClassifier.mlmodel in Sources */,
+				A17C73852DD5795D00625453 /* FlowerClassifier.mlmodel in Sources */,
 				ADDF4EBE1F07C2D10073FCE7 /* ViewController.swift in Sources */,
+				A17C73892DD5868B00625453 /* FlowerClassifier_convert_Colore.mlmodel in Sources */,
 				ADDF4EBC1F07C2D10073FCE7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

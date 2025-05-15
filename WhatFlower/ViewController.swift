@@ -15,9 +15,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var infoLabel: UILabel!
-    
-    
-    @IBOutlet var butt: UIButton!
+
     
     let imagePicker = UIImagePickerController()
 
@@ -29,52 +27,64 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePicker.sourceType = .camera
         imagePicker.allowsEditing = true
         
-        if imageView.image == nil{
-            butt.isHidden = true
-        }else{
-            butt.isHidden = false
-        }
         
-    }
-    
-    @objc fileprivate func uploadPhoto(completion: @escaping ((_ url:URL?) -> ())){
+//        if let originalImage = UIImage(named: "tiger_lily.jpg") {
+//            // Resize to model's expected input size, e.g. 227x227
+//            let resizedImage = resizeImage(originalImage, targetSize: CGSize(width: 227, height: 227))
+//
+//            // Convert to CIImage
+//            guard let ciImage = CIImage(image: resizedImage) else {
+//                fatalError("❌ 無法轉換圖片成 CIImage")
+//            }
+//
+//            // 更新畫面
+//            pickedImage = resizedImage
+//            imageView.image = resizedImage
+//
+//            // 執行模型辨識
+//            detect(flowerImage: ciImage)
+//        }
 
-        func randomString(length: Int) -> String {
-          let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-          return String((0..<length).map{ _ in letters.randomElement()! })
-        }
-        
-        
-        
-        
     }
+    func resizeImage(_ image: UIImage, targetSize: CGSize) -> UIImage {
+        let format = UIGraphicsImageRendererFormat.default()
+        format.scale = 1
+        let renderer = UIGraphicsImageRenderer(size: targetSize, format: format)
+        return renderer.image { _ in
+            image.draw(in: CGRect(origin: .zero, size: targetSize))
+        }
+    }
+
+
     
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         
         if let userPickedImage = info[.originalImage] as? UIImage {
-            
-            guard let ciImage = CIImage(image: userPickedImage) else {
+            // resize 成模型尺寸
+            let resizedImage = resizeImage(userPickedImage, targetSize: CGSize(width: 227, height: 227))
+
+            guard let ciImage = CIImage(image: resizedImage) else {
                 fatalError("Could not convert image to CIImage.")
             }
-            
-            pickedImage = userPickedImage
-            
+
+            pickedImage = resizedImage
+            imageView.image = resizedImage
             detect(flowerImage: ciImage)
         }
+
         
         imagePicker.dismiss(animated: true, completion: nil)
-        
-        butt.isHidden = false
-        butt.layer.cornerRadius = 15
-        
     }
     
     
     func detect(flowerImage: CIImage) {
         
-        guard let model = try? VNCoreMLModel(for: FlowerClassifier().model) else {
+//        guard let model = try? VNCoreMLModel(for: FlowerClassifier().model) else {
+//            fatalError("Can't load model")
+//        }
+        guard let model = try? VNCoreMLModel(for: FlowerClassifier_convert_Colore().model) else{
             fatalError("Can't load model")
         }
         
@@ -84,8 +94,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
       
             self.navigationItem.title = result.identifier.capitalized
-            
-            self.requestInfo(flowerName: result.identifier)
+            let predictedLabel = result.identifier.lowercased()
+
+            let mappedFlowerName: String
+
+            switch predictedLabel {
+            case "tiger lily":
+                mappedFlowerName = "Lilium lancifolium"
+            case "lily":
+                mappedFlowerName = "Lilium"
+            default:
+                mappedFlowerName = result.identifier
+            }
+
+            self.navigationItem.title = mappedFlowerName.capitalized
+            self.requestInfo(flowerName: mappedFlowerName)
             
         }
         
